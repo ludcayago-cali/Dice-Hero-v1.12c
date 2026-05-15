@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dice Hero Prototype</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div id="app">
+    <header>
+      <div>
+        <h1>Dice Hero</h1>
+        <p>Top-down tactical dice prototype</p>
+      </div>
+      <div id="turnInfo">Player Turn</div>
+    </header>
+
+    <main>
+      <canvas id="game" width="1100" height="720"></canvas>
+
+      <section id="panel">
+        <div class="card">
+          <h2>Selected</h2>
+          <div id="selectedInfo">Choose a hero.</div>
+        </div>
+
+        <div class="card">
+          <h2>Dice</h2>
+          <div id="diceValue">-</div>
+          <button id="rollBtn">Roll Dice</button>
+        </div>
+
+        <div class="card">
+          <h2>Actions</h2>
+          <button id="attackBtn" disabled>Normal Attack</button>
+          <button id="skillBtn" disabled>Skill</button>
+          <button id="endBtn">End Turn</button>
+          <button id="resetBtn">Reset Battle</button>
+        </div>
+
+        <div class="card">
+          <h2>Rules</h2>
+          <p>Move exactly the dice number. Melee attacks trigger from adjacent final tile. Ranged attacks trigger from exactly 2 tiles away in a straight line.</p>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
